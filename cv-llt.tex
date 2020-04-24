@@ -1,10 +1,5 @@
 %%%%%%%%%%%%%%%
-% This CV example/template is based on my own
-% CV which I (lamely attempted) to clean up, so that
-% it's less of an eyesore and easier for others to use.
-%
-% LianTze Lim (liantze@gmail.com)
-% 16 September, 2016
+% This CV is based on LianTze Lim's template (liantze@gmail.com, 16 September, 2016)
 %
 \documentclass[a4paper,skipsamekey,11pt,british]{curve}
 
@@ -26,7 +21,7 @@
 \fi
 \usepackage{csquotes}
 
-%% Only needed if you want a Publication List
+%% Include bibliography for publication list
 \addbibresource{own-bib.bib}
 
 %% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
@@ -40,17 +35,10 @@
 \definecolor{MarkerColour}{HTML}{2E53AF}
 
 % Change the item prefix marker if you want
-%\prefixmarker{$\diamond$}
-%\prefixmarker{\relscale{.9}\faMapMarker}
 \prefixmarker{\relscale{.9}\faBookmark}
-
-%% Photo is only shown if "fullonly" is included
-%\includecomment{fullonly}
-\excludecomment{fullonly}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \leftheader{%
   {\LARGE\bfseries\sffamily Nicola J. Miller}
@@ -65,14 +53,10 @@
   \makefield{\faGlobe}{\url{https://nikkimiller.space}}
 
   \makefield{\faGithub}
-  {\url{http://github.com/nmiller95/}}
+  {\url{http://github.com/nmiller95}}
 }
 
 \rightheader{~}
-\begin{fullonly}
-%\photo[r]{photo}
-%\photoscale{0.13}
-\end{fullonly}
 
 \title{Curriculum Vitae}
 
@@ -81,18 +65,17 @@
 
 \makerubric{education}
 
-
 %% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
 \input{publications}
 
 \prefixmarker{\relscale{.9}\faMapMarker}
 \makerubric{presentations}
+
 \prefixmarker{\relscale{.9}\faArrowCircleRight}
 \makerubric{misc}
 
 \prefixmarker{\relscale{.9}\faBookmark}
 \makerubric{skills}
-
 
 %\makerubric{referee}
 % \input{referee-full}
