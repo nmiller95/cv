@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (liantze@gmail.com)
+% 16 September, 2016
+%
+\documentclass[a4paper,skipsamekey,11pt,british]{curve}
+
+\usepackage{settings}
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  \setmainfont[SmallCapsFeatures={Letters=SmallCaps,LetterSpace=5},Numbers=OldStyle]{EB Garamond}
+  \setsansfont[Ligatures=TeX,BoldFont=Fira Sans Medium]{Fira Sans}
+  \setmonofont{Inconsolata}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[tracking=smallcaps]{microtype}
+  \usepackage{ebgaramond}
+  \usepackage[type1]{cabin}
+  \usepackage[varqu,varl]{zi4}
+\fi
+\usepackage{csquotes}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+%% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
+\myname{Miller}{Nicola\bibnamedelima Jane}
+
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+\definecolor{SwishLineColour}{HTML}{AF8A2E}
+\definecolor{MarkerColour}{HTML}{2E53AF}
+
+% Change the item prefix marker if you want
+%\prefixmarker{$\diamond$}
+%\prefixmarker{\relscale{.9}\faMapMarker}
+\prefixmarker{\relscale{.9}\faBookmark}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Nicola J. Miller}
+  
+  \vspace{3pt}
+  
+  \makefield{\faInstitution}{Astrophysics Group, Lennard Jones Building, Keele University, ST5 5BG, United Kingdom}
+
+  \makefield{\faEnvelopeO}{\texttt{n.j.miller1@keele.ac.uk}}
+  %\makefield{\faTwitter}{\texttt{@nikkehmiller}}
+%
+  \makefield{\faGlobe}{\url{https://nikkimiller.space}}
+
+  %\makefield{\faGithub}
+  %{\url{http://github.com/nmiller95/}}
+}
+
+\rightheader{~}
+\begin{fullonly}
+%\photo[r]{photo}
+%\photoscale{0.13}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+\makerubric{education}
+
+
+%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
+\input{publications}
+
+\prefixmarker{\relscale{.9}\faMapMarker}
+\makerubric{presentations}
+\prefixmarker{\relscale{.9}\faArrowCircleRight}
+\makerubric{misc}
+
+\prefixmarker{\relscale{.9}\faBookmark}
+\makerubric{skills}
+
+
+%\makerubric{referee}
+% \input{referee-full}
+
+\end{document}
