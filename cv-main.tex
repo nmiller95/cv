@@ -47,7 +47,7 @@
   
   \vspace{3pt}
   
-  \makefield{\faInstitution}{Astrophysics Group, Lennard Jones Building, Keele University, ST5 5BG, United Kingdom}
+  \makefield{\faMapMarker}{Astrophysics Group, Lennard Jones Building, Keele University, ST5 5BG, United Kingdom}
 
   \makefield{\faEnvelopeO}{\texttt{n.j.miller1@keele.ac.uk}}
   %\makefield{\faTwitter}{\texttt{@nikkehmiller}}
@@ -65,7 +65,12 @@
 \begin{document}
 \makeheaders[c]
 
+\prefixmarker{\relscale{.9}\faInstitution}
 \makerubric{sections/education}
+
+%\prefixmarker{\relscale{.6}\faCircle}
+%\makerubric{sections/research}
+
 
 %% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
 \input{sections/publications}
@@ -75,11 +80,18 @@
 
 %\prefixmarker{\relscale{.9}\faArrowCircleRight}
 \prefixmarker{\relscale{.9}\faBookmark}
+\makerubric{sections/proposals}
 
+\prefixmarker{\relscale{.9}\faTrophy}
 \makerubric{sections/awards}
 
-\makerubric{sections/misc}
+\prefixmarker{\relscale{.9}\faBookmark}
+\makerubric{sections/teaching}
 
+\makerubric{sections/outreach}
+%\makerubric{sections/misc}
+
+\prefixmarker{\relscale{.9}\faCode}
 \makerubric{sections/skills}
 
 %\makerubric{referee}
