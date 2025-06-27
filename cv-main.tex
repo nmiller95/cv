@@ -8,8 +8,8 @@
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
   \usepackage{fontspec}
-  \setmainfont[SmallCapsFeatures={Letters=SmallCaps,LetterSpace=5},Numbers=OldStyle]{EB Garamond}
-  \setsansfont[Ligatures=TeX,BoldFont=Fira Sans Medium]{Fira Sans}
+  \setmainfont[SmallCapsFeatures={Letters=SmallCaps,LetterSpace=5}]{EB Garamond}
+ \setsansfont[Ligatures=TeX,BoldFont=Fira Sans Medium]{Fira Sans}
   \setmonofont{Inconsolata}
 \else % If you're using pdfLaTeX or latex
   \usepackage[utf8]{inputenc}
@@ -24,6 +24,7 @@
 %% Include bibliography for publication list
 \addbibresource{own-bib.bib}
 
+\usepackage{academicons}
 
 %% Specify your last name and first name (as given in the .bib) to automatically bold your own name in the publications list. One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly for now...
 \myname{Miller}{Nicola\bibnamedelima Jane}
@@ -33,7 +34,7 @@
 % \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
 
 % Change the colours if you want
-\definecolor{SwishLineColour}{HTML}{AF8A2E}
+\definecolor{SwishLineColour}{HTML}{2E53AF}
 \definecolor{MarkerColour}{HTML}{2E53AF}
 
 % Change the item prefix marker if you want
@@ -43,19 +44,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \leftheader{%
-  {\LARGE\bfseries\sffamily Nicola J. Miller}
+  {\Huge\bfseries\sffamily Nicola J. Miller}
   
-  \vspace{4pt}
+  \vspace{6pt}
   
-  \makefield{\faMapMarker}{Nicolaus Copernicus Astronomical Center, ul. Bartycka 18, 00-716 Warsaw, Poland}
-  \vspace{1pt}
+  \makefield{\faMapMarker}{\large\textbf{Division of Astronomy and Space Physics, Uppsala University, Sweden} \normalsize}
+  \vspace{2pt}
   
-  \makefield{\faEnvelopeO}{\texttt{\href{mailto:nmiller@camk.edu.pl}{nmiller@camk.edu.pl}}}
-  %\makefield{\faTwitter}{\texttt{@nikkehmiller}}
-%
-  \makefield{\faGlobe}{\texttt{\href{https://nikkimiller.space}{nikkimiller.space}}}
-%
-  \makefield{\faGithub}{\texttt{\href{http://github.com/nmiller95}{github.com/nmiller95}}}}
+  \makefield{\faEnvelopeO}{{\href{mailto:nikki.miller@physics.uu.se}{nikki.miller@physics.uu.se}}}
+  \hspace{-12pt}
+  \makefield{\faGlobe}{{\href{https://nikkimiller.space}{nikkimiller.space}}}
+  \hspace{-12pt}
+  \makefield{\faGithub}{{\href{http://github.com/nmiller95}{nmiller95}}}
+  \hspace{-12pt}
+  \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/nikki-miller/}{nikki-miller}}
+  \hspace{-12pt}
+  \makefield{\aiOrcid}{\href{https://orcid.org/0000-0001-9550-1198}{0000-0001-9550-1198}}
+}
 
 \rightheader{~}
 
@@ -65,44 +70,42 @@
 \makeheaders[c]
 
 \prefixmarker{\relscale{.9}\faInstitution}
-\makerubric{sections/work}
+\makerubric{sections/profile}
 
 \makerubric{sections/education}
 
-
-%\prefixmarker{\relscale{.6}\faCircle}
-%\makerubric{sections/research}
-
+\vspace{-8pt}
+\input{sections/publications}
 
 %% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
 
+\prefixmarker{\relscale{.6}\faCircleO} %Circle CircleO, Adjust
+\makerubric{sections/observing}
 
-\prefixmarker{\relscale{.9}\faMapMarker}
 \makerubric{sections/presentations}
 
-%\prefixmarker{\relscale{.9}\faArrowCircleRight}
-\prefixmarker{\relscale{.9}\faBookmark}
-\makerubric{sections/proposals}
+\makerubric{sections/supervision}
 
-\prefixmarker{\relscale{.9}\faTrophy}
+\vspace{-8pt}
+\makerubric{sections/service}
+
+\vspace{-8pt}
 \makerubric{sections/awards}
 
 \vspace{-8pt}
-\prefixmarker{\relscale{.9}\faBookmark}
-\makerubric{sections/service}
-%\makerubric{sections/misc}
+\makerubric{sections/workshops}
 
 \vspace{-8pt}
-\makerubric{sections/teaching}
+\makerubric{sections/outreach}
 
 \vspace{-8pt}
 \prefixmarker{\relscale{.9}\faCode}
 \makerubric{sections/skills}
 
 %\vspace{60pt}
-%\input{sections/publications}
 
-\makerubric{sections/referee}
+
+%\makerubric{sections/referee}
 %\input{referee-full}
 
 \end{document}

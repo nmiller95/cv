@@ -23,19 +23,23 @@
 
 \newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
 
-\RequirePackage[a4paper,nohead,nofoot,hmargin=2.25cm,vmargin=2cm]{geometry}
+\RequirePackage[a4paper,nohead,nofoot,hmargin=1.25cm,vmargin=1cm]{geometry}
 \RequirePackage{relsize}
 \RequirePackage[dvipsnames,svgnames]{xcolor}
 \RequirePackage{tikz}
 \usetikzlibrary{shapes,shadows}
 
 \RequirePackage{comment}
-\definecolor{SwishLineColour}{HTML}{CEC814}
+\definecolor{SwishLineColour}{HTML}{252A6C}
 \definecolor{MarkerColour}{HTML}{252A6C}
 
 % If you're not a researcher nor an academic, you probably don't need biblatex; delete this line.
-\RequirePackage[backend=biber,bibstyle=apa,sorting=ymdnt,uniquename=init,defernumbers=true]{biblatex}
+\RequirePackage[backend=biber,style=apa,sorting=ymdnt,uniquename=init,defernumbers=true]{biblatex}
 \DeclareLanguageMapping{british}{british-apa}
+\AtBeginDocument{%
+  \renewbibmacro*{name:andothers}{et\addabbrvspace al.}
+}
+
 %% Added 17 Jan 2018 from https://tex.stackexchange.com/a/140641/226 and https://tex.stackexchange.com/a/46879/226
 \DeclareSortingTemplate{ymdnt}{
   \sort{
